@@ -125,4 +125,29 @@ document.write("Hello...01_Core_2");
             let _1a = "10";  // valid
         */
 
+//----------------- Hoisting ---------------------
+    // 01. variable hoisting
+    // 02. Function hoisting
+
+     // * let / const : hoisting no support
+
+
+    // 01. Variable Hoisting
+        // console.log(x); //undifined
+        //refered to a variable declared later
+            /*
+                console.log(x); //undifined
+                var x = 100;
+                console.log(x); //100
+             */
+
+    // 02. Function Hoisting
+        /*
+        function printMyDetails(){
+            console.log("My Name Is Mindula");
+            console.log("My Age is 20");
+            console.log("I'm Living In Sri Lanka");
+        }
+        printMyDetails();
+        */
 
