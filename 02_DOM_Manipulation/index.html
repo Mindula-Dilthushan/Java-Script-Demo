@@ -1,0 +1,160 @@
+<!--/**
+* @author : Sanu Vithanage
+* @since : 0.0.1
+**/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+
+<h1 class="h1class" id="display">Document Object Model Manipulation</h1>
+<h1 class="h1class">Document Object Model Manipulation</h1>
+<h2>Institute of Java and Software Engineering</h2>
+<h3>RWAD</h3>
+<input name="inputText" placeholder="Input Text" type="text">
+<button id="btn">Test Button</button>
+
+<img alt="" id="img" src="">
+<div>
+
+</div>
+<p id="pid">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, itaque pariatur. Architecto earum esse
+    exercitationem expedita labore libero maiores, quae, saepe sed sequi soluta ut voluptatibus! Ad qui quibusdam
+    quis.</p>
+
+<ul>
+    <li>IJSE</li>
+    <li>GDSE</li>
+    <li>CMJD</li>
+    <li>RWAD</li>
+    <li>DEP</li>
+</ul>
+
+
+<ol>
+    <li id="btnCustomer">Customer</li>
+    <li id="btnItem">Item</li>
+</ol>
+<h3 id="customer">This is Customer Content</h3>
+<h3 id="item">This is Item Content</h3>
+
+
+<script>
+
+    // DOM Manipulation
+
+    // can select DOM elements by using following methods
+    // document.getElementById();// can select by a id
+    // document.getElementsByClassName(); //can select by a class name // return an array
+    // document.getElementsByTagName(); //can select  by element tag name // return an array
+    // document.getElementsByName(); // can select by element name attribute // return an array
+    // document.querySelector(); // can select by any selector
+    // document.querySelectorAll(); //can select by any selector // return an array
+
+
+    //selecting a element
+    var h1Elemets = document.getElementsByTagName('h1');
+    //getting text values
+    h1Elemets[0].innerText//"Document Object Model Manipulation"
+
+    //changing text values
+    h1Elemets[0].innerText = "Institute of Software Engineering";//"Institute of Software Engineering"
+
+    //remove an element
+    h1Elemets[1].remove();
+
+    //change element style
+    h1Elemets[0].style.color = 'red'
+
+    h1Elemets[0].style.fontSize = '40px';
+
+    var image = document.querySelector('img');
+
+    //access attributes
+    image.getAttribute('src');//""
+    //change attribute values
+    image.setAttribute('src', 'assests/img/image.jpg');
+
+    image.style.width = '500px';
+
+    image.getAttribute('src');//"assests/img/image.jpg"
+    var ul = document.querySelector('ul');
+
+    //get html elements
+    ul.innerHTML;
+    // "
+    // <li>IJSE</li>
+    // <li>GDSE</li>
+    // <li>CMJD</li>
+    // <li>RWAD</li>
+    // <li>DEP</li>
+    // "
+
+    ul.innerHTML = '<li>Hello</li>';//"<li>Hello</li>"
+    ul.innerHTML = '<li>Hello</li><li>CMJD</li>';//"<li>Hello</li><li>CMJD</li>"
+
+    var body = document.querySelector('body');
+    body.innerHTML//return all html elements inside the body
+
+
+    //Event Listener
+    //Selecting Button
+    var btn = document.getElementById("btn");
+    // add a event listener for the button
+    btn.addEventListener('click', function () {
+        //selecting input field
+        var input = document.querySelector('input');
+        //selecting h1 element
+        var h1 = document.getElementById("display");
+        //set input value to the h1 text
+        h1.innerText = input.value;
+
+    });
+
+
+
+    // 2nd case
+    var h2 = document.querySelector('h2');
+    var option = true;
+    h2.style.cursor = 'pointer';
+    h2.addEventListener('click', function () {
+        if (option) {
+            h2.style.color = 'red';
+            option = false;
+        } else {
+            h2.style.color = 'green';
+            option = true;
+        }
+
+    });
+
+
+    // hide customer and item
+    var customer = document.getElementById("customer");
+    var item = document.getElementById("item");
+
+    customer.style.display='none';
+    item.style.display='none';
+
+
+    var btnCustomer=document.getElementById("btnCustomer");
+    btnCustomer.addEventListener('click',function (){
+        item.style.display='none';
+        customer.style.display='block';
+    });
+
+
+    var btnItem=document.getElementById("btnItem");
+    btnItem.addEventListener('click',function (){
+        customer.style.display='none';
+        item.style.display='block';
+    });
+
+
+
+</script>
+</body>
+</html>

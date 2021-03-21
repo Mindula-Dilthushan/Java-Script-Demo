@@ -1,0 +1,1068 @@
+<!--/**-->
+<!--* @author : Sanu Vithanage-->
+<!--* @since : 0.0.1-->
+<!--**/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Script Basic</title>
+</head>
+<body>
+<h1>Java Script Core</h1>
+
+<script>
+
+    // alert("Hello");
+
+    /*
+    console.log("Hello this is my Console Output");
+    document.write("Hello this for document");
+     */
+
+
+    //Strong Type Language (Java)
+    // String name="Dasun";
+
+
+    /*    //Loosly Typed Language
+        var name = "Dasun"; //no data types - var is a declaration type which explain this is a variable
+        console.log(name);
+        console.log(typeof name);//string
+
+        //Dynamic Type Language
+        //Variables type can be change dynamically
+        var age=10;
+        console.log(typeof age);//number
+        age="No age";
+        console.log(typeof age);//string*/
+
+
+    // Declartion Types
+    // Var// Let// Const
+
+
+    // VAR
+    // * no scope satisfaction
+    // * variable name can be duplicate
+    // * Support for dynamic typing
+
+    /* var name = "IJSE";
+     if (true) {
+         var address = "Panadura";
+         console.log(name);
+     }
+     console.log(address); // no error*/
+
+    // var name="Minduala"; // name is already defined but no any error
+
+
+    /* //LET (Declaration)
+     // variable name duplicate (No)
+     //Scope Satisfied
+     //Dynamic Type Support
+
+     //No variable name duplication
+     let name = "Kasun";
+     // let name="Dasun";//error
+     //Uncaught SyntaxError: Identifier 'name' has already been declared
+
+     //scope satisfied
+     let age = 10;//global scope
+     {
+         // local scope
+         let address = "Panadura";
+         console.log(age);// valid
+     }
+     console.log(address); // error
+
+
+     //Support for dynamic typing
+     let salary = 100;
+     console.log(typeof salary); //number
+
+     salary = "100";
+     console.log(typeof salary); //string*/
+
+
+    /*    // Const
+        //must have a initialize value when the variable declare
+        // variable name duplicate (No)
+        //Scope Satisfied
+        //One time Declaration. cannot change values after declare
+
+        const id = "C001";
+        // const id = "C002";// error // cannot duplicate name
+
+        // scope satisfied
+        {
+            const name="Manura";
+        }
+        // console.log(name);// error
+
+        //One time declaration
+        const age=10;
+        // age=20;// error. cannot chanage values after declaration*/
+
+
+
+
+    // //variables
+    // //Case Sensitive
+    // let name = "Ravindu";
+    // let Name = "Kavindu";
+    //
+    //
+    // //Variable Names
+    //
+    // let azHello="JS";
+    // let _myName="Institute of Software Engineering";
+    // let $compnay="ABCD";
+    //
+    // // let 3fd=100; // error numbers cannot be used for variables names as the first character
+
+
+    //Hoisting
+    /*     -Variable Hoisting
+           -Function Hoisting*/
+
+    /*
+        // Variable Hoisting
+        // console.log(x);//undifined
+
+        //referred to a variable declared later
+        console.log(x);//undefined
+        var x = 100;
+        console.log(x); //100*/
+
+
+
+    // Functional Hoisting
+    // printMyDetails();
+    //
+    // function printMyDetails() {
+    //     console.log("My Name Is Thihan");
+    //     console.log("My Age is 100");
+    //     console.log("Im Living in India");
+    // }
+
+
+    // Data Types
+    // Primitive Data Types
+    /*    *String
+          *Boolean
+          *Undefined
+           *Number
+         // BigInt
+         //Symbol
+
+        //Structural Data Types
+        *Null
+        Object
+        */
+
+
+    /*    //String
+        // there are two ways that we can set a string
+        var name="IJSE";
+        var address='Panadura';
+
+        // String Related Methods
+        name.length; // can get the length of the string
+        name.charAt(0);// can get the character from index number
+        name.charCodeAt(1);// can get char Code from index number
+        name.trim();// can remove spaces from both sides
+        name.trimLeft();// remove spaces only from left side
+        name.trimRight();// remove spaces only from right side
+        name.substr(1,2);// get index and length and select a range
+        name.substring(1,2);// get start and end number of index numbers and select a range
+        name.indexOf("a");// return index number of a character
+        name.toUpperCase(); //can convert string into upper case
+        name.toLowerCase(); //can convert string into lower case
+        name.split(","); // can split a string into parts using a separator
+        */
+
+    // Boolean
+    // var boolean1=true;
+    // var boolean2=false;
+    // typeof boolean1;
+    // typeof boolean2;
+
+    /*   //Undefined
+       var s; // no value defined // so there is no data type for s
+       typeof s; // if we check the data type now the result is undefined
+       // "undefined"
+
+       //when a value is not assigned to a variable its type refers to undefined
+       //because its not defined*/
+
+    /*    // Null
+        var myAge=null;
+        typeof null; //object
+
+        // when we want to defined a value(initialize) and when we dont know the actual
+        // value we can use null to initialize that variable
+
+        //null is a object type in js*/
+
+
+    /* //Numbers
+     // ===========
+
+     // Integers
+     //-Decimal
+     //-binary
+     //-Octal
+     //-HexDecimal
+
+     //Floating Points
+
+     //Integer
+     var num1 = 342;
+     typeof num1;//number
+
+     //floating point number
+     var num2 = 23.34;
+     typeof num2;//number
+
+
+     //Decimal
+     var d1 = 1020;
+     typeof d1;
+
+     //Binary
+     var b1 = 0b1010;
+     typeof b1;
+
+     //Octal
+     var o1 = 0o72;
+     typeof o1;
+
+     //HexDecimal
+     var hd = 0xA;
+     typeof hd;
+ */
+
+    /*    // BigInt
+        // (if we want to use large numbers we can use this data types)
+        Number.MAX_SAFE_INTEGER // we can get the max value in the Number's safe zone with this
+        // if we want to use large number than that we can use BigInt to represent that value;
+
+        var bigInt = 394949494n;
+        typeof bigInt;//bigint*/
+
+
+    /*    // Object
+        // a container for values
+
+        // js object
+        var customer = {
+            id: "C001", //properties
+            name: "Ishanka",
+            age: 10,
+            state: "Single",
+            availability: true
+        }
+        typeof customer; //object
+
+        // how to access object properties
+        customer.id; // dot notation //C001
+        customer['id']// bracket notation //C001
+
+        // dynamically  adding properties and deleting..?
+
+        customer.address="Galle"; //adding a property to the customer object
+
+        delete customer.id;// removing a property from customer object
+        //those both are possible in js
+        */
+
+
+
+    /*    // Methods in Objects
+        var customer={
+            id:"C001",
+            name:"Dasun",
+            getCustomerDetails:function (){ //this is how to write a method in js object
+                console.log("Get Customer Details Function Called");
+            }
+        }
+        customer.getCustomerDetails();// we can call a method like this
+
+        // can we add methods dynamically..? yes
+        customer.getCustomerID=function (){
+            console.log("Customer ID is C001");
+        }
+
+        customer.getCustomerID(); // we can do that.*/
+
+
+    /*    // access properties in function
+        var customer ={
+            id:'C001',
+            name:'Dasun',
+            getCustomerDetails:function (){
+                console.log("Customer ID :"+this.id+" and Customer Name is: "+this.name);
+            }
+        }
+
+        customer.getCustomerDetails();*/
+
+
+
+    /* // Array Literals
+     //literal base array
+     var customerNames=["Udara","Chapa","Aazaf","Sandakelum","Ishanka"];
+
+     //constructor base array
+     var colors=new Array("red","Green","Orange","Purple");
+
+     // how to accsess values in a array
+     // colors[0];// red
+
+     // Array Related Methods
+     // colors.pop(); // remove the last indexed value in the array
+     // colors.push(10); // add new value to the last index of the array
+     // colors.shift(); // remove the first index value of the array
+     // colors.unshift(10); // add a new value to the first index of the array
+     // colors.slice(1,3);// can copy selected range values to a new array
+     // colors.splice(1,1); // remove selected range values from array
+     // colors.reverse(); // can reverse the values of the array
+     // colors.length; // can get count of values in a array*/
+
+
+    /*
+        // RegEx Literals
+        //can store Regular Expression in JS
+
+        var simpleValidation=/^[a-z]{3}$/;
+
+        //test a string using the above pattern
+        var name="dasun";
+        simpleValidation.test(name); // false
+    */
+
+
+    // ==================================
+
+
+    // Function
+    // -Declaration
+    // -Expression
+    /*
+        //Declaration Case -1
+        function getMyDetails() {
+            var name = "Dasun"
+            console.log(name);
+        }
+
+        getMyDetails();*/
+
+    /*
+    // Case 2
+        var age = getMyName();
+
+        //Declaration
+        function getMyName() {
+            return 10;
+        }
+
+        console.log(age);
+    */
+
+    /*
+        //Expression
+        // In Programming Languages we called they have First Class Functions when functions
+        // in that language are treated like any other variable.
+        var myName = function () {
+            return "IJSE";
+        }
+        console.log(myName());*/
+
+
+    // Function Arguments
+    //case-1
+    /*    function printMyDetails(id, name) {
+            console.log("Customer ID is " + id);
+            console.log("Customer Name is " + name)
+        }
+
+        printMyDetails("C001", "Malindu");*/
+
+
+    //case-2
+    /*    function printMyDetails(name,address){
+            console.log(name,address);
+        }
+
+        printMyDetails("Ravindu","Galle");*/
+
+
+    /*
+        // case 3
+        // Overloading Support..?
+        function printMyDetails(id, name) {
+            console.log("First Function")
+        }
+
+        function printMyDetails(id, name, address) {
+            console.log("Second Function")
+        }
+
+        //No overloading support
+        //always call the last function
+        printMyDetails("C001", "Pramuda", "Galle", 1000);
+    */
+
+
+
+    // Arguments Object
+
+    /*    function getMyDetails(id,name) {
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+            console.log(id);
+            console.log(name);
+        }
+
+        getMyDetails("C001","Dasun","Amal","Galle");*/
+
+
+    // Nested function
+    //We can implement function inside another function
+    /*    function getAge(){
+
+            function calculateAge(){//nested function
+                return 10+20;
+            }
+            //this can be called only inside this function// cannot call outside of this function
+            return calculateAge();
+        }
+
+        var age=getAge();
+        console.log(age);*/
+
+    // =====================================
+
+    /*    var mySalary=100;//global scope
+        function getMyName(){
+            var myName="Dasun"; //local variables
+            console.log(mySalary);// 100
+            console.log(myName);//Dasun
+
+        }
+        getMyName();
+        console.log(myName);//error*/
+
+
+    /*
+
+        // Arrow Function
+        var getMyName = () => {
+            console.log("My Name Is Thihan");
+        }
+        getMyName();
+
+    */
+
+    // Loops and Iteration
+    // for
+    // forEach
+    //for if
+    //for of
+    //while
+    //do while
+
+    /*
+        //for loop
+        for (var i = 0; i < 10; i++) {
+            console.log(i);
+        }
+    */
+    //while loop
+    /*    var a = 0;
+        while (a < 10) {
+            a++;
+            console.log(a);
+        }
+        */
+
+    //Do While
+    /*    var m = 0;
+        do {
+            console.log(m);
+            m++;
+        } while (m < 10);*/
+
+
+    // var colors = ['Red', 'Green', 'Orange', 'Purple', "Pink"];
+
+    // for (var i = 0; i < colors.length; i++) {
+    //     console.log(colors[i]);
+    // }
+
+    /*    //for of
+        for (var i of colors) {
+            console.log(i);// value of the index
+        }
+
+
+        // for in
+        for (var i in colors) {
+            console.log(i);//index number of the value
+        }*/
+
+
+    /*    //forEach
+        //this is a callback function
+        colors.forEach(function (value) {
+            console.log(value);
+        });*/
+
+
+    // Control Structures
+
+    //if,, else if
+    //switch cases
+    //ternary operators
+
+    // //if case
+    // var a = 100;
+    //
+    // if (a == 200) {
+    //     console.log("Equal")
+    // } else {
+    //     console.log("Does not Equal")
+    // }
+
+
+    /*
+        //else if
+        var a = 200;
+        if (a == 10) {
+            console.log("A is 10");
+        } else if (a == 20) {
+            console.log("A is 20");
+        } else if (a == 200) {
+            console.log("A is 200");
+        } else {
+            console.log("A is nothing above");
+        }
+    */
+
+
+    /*    //Switch Case
+        var source = "IJSE";
+
+        switch (source) {
+            case "CMJD":
+                console.log("CMJD SELECTED");
+                break;
+            case "IJSE":
+                console.log("IJSE SELECTED");
+                break;
+            default:
+                console.log("NOTHING ABOVE SELECTED")
+
+        }
+
+
+        //Ternary Operator
+        var result = (10 < 20) ? 100 : 200;
+        console.log(result);*/
+
+    /*
+
+        //Parsing a string to a number
+        var age1 = "100";
+        var age2 = "200";
+        var totalAge = parseInt(age1) + parseInt(age2);
+        // var totalAge = age1 + age2;
+        console.log(totalAge);
+
+
+        parseInt("100")//can parse a string into Number type(int)
+        parseFloat("20.34");//can parse a string into Number Type(float)
+
+        //another way to do the same thing(parse a string to number)
+        var tot = (+"500") + (+"200");
+        console.log(tot);
+    */
+
+
+
+    /*    // Objects
+        //literal base // row state
+        //Constructor Base (Function Base )
+
+        // literal base object
+        var customer = {
+            id: 'C001',
+            name: "Dasun",
+            age: 10,
+            salary:2000
+        }
+
+        //what we can do with this object
+
+        //accessing properties values
+        customer.id;//C001
+
+        //change existing property values
+        customer.id = "C002";
+
+        //adding new properties
+        customer.address = 'Panadura';
+
+        //deleting existing properties
+        delete customer.address;
+
+        //count all properties of the object
+        Object.keys(customer);//return all property names
+
+
+        // so how to limit them as we want
+        //we can use object property descriptors for that
+
+        Object.getOwnPropertyDescriptor(customer, 'id');
+        // {value: "C002", writable: true, enumerable: true, configurable: true}
+
+        // we can use those property descriptors to change the behaviours of properties as we want
+        // value
+        // writable
+        // enumerable
+        // configurable
+
+
+        // What is Writable
+        //by using this attribute in property descriptors we
+        // can stop the value change of the property
+
+        Object.defineProperty(customer,'id',{
+            writable:false // changed true to false
+        });
+
+        customer.id="C004"; //looks like its changed but not changed
+
+        customer.id;//C002 (old value)
+
+
+        //Enumerable
+        //Remove the Property Keys Countable state
+        Object.defineProperty(customer,'name',{
+            writable:false,
+            enumerable:false// remove from countable state
+        })
+
+        Object.keys(customer);// no name in the result
+
+        for(var i of customer){
+            console.log(i);// no name detected in the result
+        }
+
+        //Configurable
+        //Cannot Reconfigure (Non-Configurable)
+        //cannot delete
+        Object.getOwnPropertyDescriptor(customer,'salary');
+        // {value: 2000, writable: true, enumerable: true, configurable: true}
+
+        Object.defineProperty(customer,'salary',{
+            configurable:false// non-configurable
+        });
+
+        delete customer.salary; //cannot delete
+
+        //can we change non-configurable to configurable again..?
+        Object.defineProperty(customer,'salary',{
+            configurable:true//error, cannot do this
+        });
+
+        //can we change other attributes after changing to non-configurable
+        Object.getOwnPropertyDescriptor(customer,'salary');
+        // {value: 2000, writable: true, enumerable: true, configurable: false}
+
+
+        Object.defineProperty(customer,'salary',{
+           writable:false// if writable was true when we change to non-configurable, yes we can do it,
+            //otherwise no, we cannot do it
+        });
+
+        Object.defineProperty(customer,'salary',{
+            writable:true// error... cannot do this again
+        });
+        */
+
+
+    // Object Properties
+    // There are two types of properties
+    //     -Data Properties
+    //     -Accessor Properties
+    // ==========================================
+    /*
+        // Data Properties
+        //Data Properties always have direct values
+        var customer = {
+            id: "C001", // data property
+            name: "Dasun"
+        }
+        //and also data properties have 4 property descriptors
+        Object.getOwnPropertyDescriptor(customer,'id');
+        // {value: "C001", writable: true, enumerable: true, configurable: true}
+
+
+        // -Accessor Properties
+        // Accessor properties dont have direct values. their values are assigned by
+        // getters and setters
+
+        //this is how to declare a accessor property
+        Object.defineProperty(customer,'address',{
+            get(){
+                return address;
+            },
+            set(newValue){
+                address=newValue;
+            },
+            enumerable:true,
+            configurable:true,
+            // writable:true, //error - accessor properties cannot have writable
+            // value:"D" // error - accessor properties cannot have a value
+        });
+
+        //And property descriptors are also changed in Accessor properties
+        Object.getOwnPropertyDescriptor(customer,'address');
+        // {enumerable: false, configurable: false, get:f, set:f}
+        // there are only 4 descriptors
+        // writable and value attributes are not here because there is no direct value
+
+        // ======================================================*/
+
+
+    // Freeze vs Seal
+    //we can use these methods to affect the all properties behaviours of a object
+    //from a one call
+
+    /*// Freeze
+    var customer = {
+        id: 'C001',
+        name: 'Dasun'
+    }
+    //before freezing
+    Object.getOwnPropertyDescriptor(customer, 'id');
+    // {value: "C001", writable: true, enumerable: true, configurable: true}
+    Object.getOwnPropertyDescriptor(customer, 'name');
+    // {value: "Dasun", writable: true, enumerable: true, configurable: true}
+
+    //freeze the customer object
+    Object.freeze(customer);
+
+    //after freezing
+    Object.getOwnPropertyDescriptor(customer, 'id');
+    // {value: "C001", writable: false, enumerable: true, configurable: false}
+    Object.getOwnPropertyDescriptor(customer, 'name');
+    // {value: "Dasun", writable: false, enumerable: true, configurable: false}
+
+    //so after freezing we cannot re-configure the object and change the values of the properties
+    delete customer.id;// not working
+    customer.id = "C003";// not working
+
+    customer.address = "Galle";// cannot add new properties to the object after freezing
+    // customer.address// undefined
+
+
+    // Seal
+    var item = {
+        iCode: 'I001',
+        iName: 'Lux'
+    }
+
+    Object.getOwnPropertyDescriptor(item, 'iCode');
+    // {value: "I001", writable: true, enumerable: true, configurable: true}
+    Object.getOwnPropertyDescriptor(item, 'iName');
+    // {value: "Lux", writable: true, enumerable: true, configurable: true}
+
+    Object.seal(item);
+
+    Object.getOwnPropertyDescriptor(item, 'iCode');
+    // {value: "I001", writable: true, enumerable: true, configurable: false}
+    Object.getOwnPropertyDescriptor(item, 'iName');
+    // {value: "Lux", writable: true, enumerable: true, configurable: false}
+
+    //so after sealing item object properties are non-configurable
+    delete item.iCode;// not working
+
+    item.iCode = "I002";// working
+
+    item.price = 300;// not working .. cannot add new properties*/
+
+
+
+    // Constructor Base Objects (Function Base Objects)
+    // ===================================================
+    //Literal base object
+    /*
+        var customer = {
+            id: 'C001'//property
+        }
+
+        typeof customer;//object
+        // how to make a constructor base object
+        //function customer
+        function Customer() {
+            this.id = 'C001';//property
+        }
+
+        typeof Customer;//function
+        // Customer();//method
+        // how to create a object using Customer function..?
+        //using new keyword and calling the function can create a Object
+        var c1 = new Customer(); // c1 is a object
+        typeof c1;//object
+        c1.id;//C001
+    */
+
+
+    // Function base objects further more
+    /*    function Customer() {
+            this.id = "C001"; //property
+            this.name = "Neranjaya";
+            this.age = 33;
+            this.getCustomerID=function (){ //functions
+                return this.id;
+            }
+        }
+
+        var c1 = new Customer();
+        var c2 = new Customer();
+
+        c1.age = 44;//can change or call values
+        c1.getCustomerID(); //can call methods also*/
+
+
+    /* // Constructor usage in Function Base Objects
+     function Item(icode, iname, iprice) {
+         this.icode = icode;
+         this.iname = iname;
+         this.iprice = iprice;
+         this.getItemCode = function () {
+             return this.icode;
+         }
+     }
+
+     //we can make lot of objects using Item function
+     var i1 = new Item('I001', 'Lux', 300);
+     i1.icode;//I001
+
+     var i2 = new Item('I002', 'Signal', 200);
+     i2.iname;//Signal
+     i2.iprice;//200
+ */
+    //we can access properties directly
+
+    //can we make them private..? and access them using getter and setters..? yes
+    // (apply encapsulation) // yes
+
+    /* function Customer(id, name, address, salary) {
+         var __id = id; // absolutely private (convention)
+         var __name = id;
+         var __address = address;
+         var __salary = salary;
+
+         this.getCustomerID = function () {
+             return __id;
+         }
+         this.getCustomerName = function () {
+             return __name;
+         }
+         this.getCustomerAddress = function () {
+             return __address;
+         }
+         this.getCustomerSalary = function () {
+             return __salary;
+         }
+         this.setCustomerID = function (newID) {
+             __id = newID;
+         }
+         this.setCustomerName = function (newName) {
+             __name = newName;
+         }
+         this.setCustomerAddress = function (newAddress) {
+             __address = newAddress;
+         }
+         this.setCustomerSalary = function (newSalary) {
+             __salary = newSalary;
+         }
+     }
+
+     let c1 = new Customer("C001", "Dasun", "Galle", 2000);
+     c1.getCustomerID(); //C001
+     c1.setCustomerID("C002")
+     c1.getCustomerID(); //C002*/
+
+
+
+    // Prototypes In Objects
+    //Object //root
+    //Function //function root
+
+    // Object.prototype // can access the prototype
+    // Object.__proto__
+    // Object.prototype.constructor // can access the prototype constructor
+    // Object.prototype.__proto__
+
+    // Function.prototype
+    // Function.__proto__
+    // Function.prototype.constructor
+    // Function.prototype.__proto__
+
+
+
+    // Object.__proto__==Function.__proto__
+    // true
+    // Function.__proto__==Object.__proto__
+    // true
+
+
+    // Function.prototype.__proto__==Object.prototype
+    // true
+    // Object.prototype.__proto__==null
+    // true
+
+
+   /* customer.__proto__==Object.prototype// true
+    customer.__proto__==Object// false
+    customer.__proto__==Function.prototype// false
+
+    function Customer(){
+        this.id="C001";
+    }
+
+    Customer.prototype
+
+    Customer.__proto__==Function// false
+
+    Customer.__proto__==Function.prototype// true
+
+    Customer.prototype.__proto__==Object.prototype// true*/
+
+
+    // ==========================
+   /* var customer={
+        id:'C001',
+        name:'Dasun'
+    }
+    function Customer(){
+        this.id="C001";
+    }
+
+    var c1=new Customer();
+    typeof c1;// "object"
+
+    c1.__proto__==Object.prototype// false
+    c1.__proto__==Function.prototype// false
+    c1.__proto__==Customer.prototype// true
+    var c2= new Customer();
+
+    c2.__proto__==Customer.prototype// true
+    c1
+
+    Customer.prototype.test=2000;
+
+    c1.test//2000
+    c2.test//2000
+
+    var c3= new Customer();
+    c3.test//2000
+
+    var item={
+        code:"I001"
+    }
+
+    Object.prototype.test2=300;
+    item.test2//300
+    item.__proto__==Object.prototype//true
+    */
+
+
+
+    // // =======================
+    // // another way of creating objects
+    // //Referring Function Prototype
+    // var newOb=Object.create(Function.prototype);
+    // newOb.__proto__==Function.prototype//true
+    //
+    // //Referring Object Prototype
+    // var newOb2=Object.create(Object.prototype);
+    // newOb2.__proto__==Object.prototype//true
+    // Object.prototype.age=20;
+    // newOb2.age//20
+    //
+
+    
+
+    // Inheritance
+  /*  function Vehicle(){
+    }
+
+    function Car(){
+    }
+
+    var v1= new Vehicle();
+    var c1= new Car();
+
+    //changing car's prototype
+    Car.prototype=Vehicle.prototype// so both vehicle and car have one prototype
+
+    var c2= new Car();
+    c2.__proto__==Vehicle.prototype//true (now car objects are also under vehicle prototype)
+
+    Vehicle.prototype.testVehicle="BMW"
+    c2.testVehicle//"BMW"
+
+    Vehicle.prototype.park=function(){
+        console.log("Vehicle is Parking");
+    }
+
+    var c3= new Car();
+    c3.park();//Vehicle is Parking*/
+
+
+
+//    Inheritance problem resolved
+
+    function Vehicle(){
+    }
+
+    function Car(){
+    }
+
+    Car.prototype =Object.create(Vehicle.prototype);
+    Car.prototype.constructor=Car;
+
+
+    var v1= new Vehicle();
+    var c1=new Car();
+
+
+
+    Vehicle.prototype.park=function(){
+        console.log("Vehicle is Parking")
+    }
+
+    v1.park();
+    c1.park();
+
+
+    Car.prototype.startCar=function (){
+        console.log("Car was started");
+    }
+
+    c1.startCar();
+    // v1.startCar();//error
+
+
+
+
+
+</script>
+</body>
+</html>

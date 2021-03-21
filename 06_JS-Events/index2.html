@@ -1,0 +1,102 @@
+<!--/**
+* @author : Sanu Vithanage
+* @since : 0.0.1
+**/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Events</title>
+</head>
+<body>
+<h1>Hello JS Events..!</h1>
+<h2>Specified Events</h2>
+<input id="txtInput" placeholder="inputText" type="text">
+<button id="btnTest" >Test</button>
+
+<script src="assests/js/jquery-3.6.0.min.js"></script>
+<script>
+    // var btn=document.getElementById("btnTest");
+    // btn.addEventListener('click',function (){
+    //     alert('Done');
+    // });
+
+
+    // Most used events in js
+    //click
+    //dblclick
+    //blur
+    //focus
+    //keyup
+    //keydown
+    //keypress
+    //mousemove
+    //mousedown
+    //mouseup
+
+
+    // $('#btnTest').on('click',function(){
+    //     alert('Working');
+    // });
+    //
+    // $('#btnTest').off('click');
+
+/*
+
+    $('#btnTest').on('dblclick',function (){
+        alert('btn double clicked');
+    });
+
+    $("#txtInput").on('blur',function (){
+        console.log("Text filed Blured");
+    });
+
+    $("#txtInput").on('focus',function (){
+        console.log("Text filed focused");
+    });
+*/
+
+    // $("#txtInput").on('keyup',function (){
+    //     console.log("KeyUpEvent Worked");
+    // });
+
+    //event object (we can use this object to get the details about event)
+    // $("#txtInput").on('keydown',function (event){
+    //     console.log(event.key);
+    // });
+
+    // $("#txtInput").on('keypress',function (){
+    //     console.log("KeyPress Worked");
+    // });
+
+
+    // $('h1').on('mousemove',function (){
+    //     console.log('mouse is moving');
+    // });
+
+    // $('h1').on('mousedown',function (){
+    //     console.log('mouse is down');
+    // });
+    //
+    // $('h1').on('mouseup',function (){
+    //     console.log('mouse is up');
+    // });
+
+
+
+    $(document).on('mousemove',function (eventOb){
+        // console.log(eventOb.pageX,eventOb.pageY);
+        $('h1').css({
+            'position':'absolute',
+            'left':eventOb.pageX,
+            'top':eventOb.pageY
+        });
+    });
+
+
+
+
+
+</script>
+</body>
+</html>

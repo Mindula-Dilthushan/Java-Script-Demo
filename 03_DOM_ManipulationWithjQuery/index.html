@@ -1,0 +1,128 @@
+<!--/**
+* @author : Sanu Vithanage
+* @since : 0.0.1
+**/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation with jQuery</title>
+</head>
+<body>
+<h1 class="h1Class" id="h1ID">jQuery..?</h1>
+<h2 class="h2Class" id="h2ID">What is jQuery...?</h2>
+<p class="pClass" id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aliquid aperiam aut
+    autem beatae blanditiis
+    deserunt, ducimus eveniet, excepturi, fuga illo illum ipsam iste laboriosam molestias ratione voluptate
+    voluptatum!</p>
+<p class="pClass" id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aliquid aperiam aut
+    autem beatae blanditiis
+    deserunt, ducimus eveniet, excepturi, fuga illo illum ipsam iste laboriosam molestias ratione voluptate
+    voluptatum!</p>
+<p class="pClass" id="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aliquid aperiam aut
+    autem beatae blanditiis
+    deserunt, ducimus eveniet, excepturi, fuga illo illum ipsam iste laboriosam molestias ratione voluptate
+    voluptatum!</p>
+<img alt="" id="img" src="" width="300px">
+
+<input id="txtID" type="text">
+<button id="btnTest">Test</button>
+<ul id="ul">
+    <li>ABCD</li>
+    <li>EFGH</li>
+</ul>
+
+<script src="assests/js/jquery-3.6.0.min.js"></script>
+<script>
+    //how to select a element using JavaScript
+    // let txtID=document.getElementById("txtID");
+
+
+    //how to do the same process via jQuery
+    // $('#txtID'); //select input field
+    // $('input');
+    // $('h1').text(); select h1 and return the text
+
+
+    // Change the selector as we want
+    // var RS=jQuery.noConflict();
+
+    // $() //Error // now this default selector disabled
+    // RS('p'); //now this is the new selector for jQuery
+
+ /*   //What are the other methods of selecting elements in jQuery
+    // CSS selectors
+    $('*');//universal selector //work
+    $('h1');//type selector //work
+    $('#h1ID');//id selector //work
+    $('.h2Class');//class selector //work
+    $('[id]');//attribute selector //work
+    $('[class=h2Class]'); //work
+    $('li:nth-child(1)');//pseudo-class //work
+    $('li:nth-child(2)').text();//work
+    $('li:hover');//Not-working
+
+
+    // CSS Combinators..?
+    $('ul>li'); // working //child combinator
+    $('body li'); //working //descendent combinator
+    $('h2+p'); //working //adjacent combinator
+    $('h2~p'); //working //general siblings combinator
+
+    // can we use group selecting
+    $('h1,h2,p1');//working
+    $('h1,#h1ID,#p1');//working*/
+
+
+
+    //lets find about methods in jQuery
+/*
+    //get and set text
+    $('h1').text();//"jQuery..?"
+    $('#p1').text('Hello there how are you..?');
+
+    //set styles
+    $('h1').css('color','red');
+    $('h2').css({
+        'color':'red',
+        'font-size':'100px'
+    });
+
+    //remove elements from dom
+    $('h2').remove();
+
+    //get and set attributes values
+    $('#img').attr('src');//""
+    $('#img').attr('src','https://www.ijse.lk/images/logos/ijse.png');
+
+
+    //get and change html elements
+    $('ul').html();
+    // "
+    // <li>ABCD</li>
+    // <li>EFGH</li>
+    // "
+    $('ul').html("<li>IJSE</li>");
+
+    //get and send input values
+    $('#txtID').val();
+    $('#txtID').val("Hello");
+
+    // bind a click event
+    $('#btnTest').click(function(){
+        alert("hello");
+    });
+
+*/
+
+    $('#btnTest').click(function(){
+        // let color=$("#txtID").val();
+        // $('#h1ID').css('color',color);
+        $('#h1ID').css('color',$("#txtID").val());
+    });
+
+
+
+</script>
+</body>
+</html>

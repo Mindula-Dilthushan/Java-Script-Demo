@@ -1,0 +1,135 @@
+<!--/**-->
+<!--* @author : Sanu Vithanage-->
+<!--* @since : 0.0.1-->
+<!--**/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traversing Using jQuery</title>
+</head>
+<body>
+<h2>Hello there ..!</h2>
+<img src="https://www.ijse.lk/images/logos/ijse.png" alt="" width="300px">
+<main>
+    <section>
+        <section>
+            <section>
+                <div>
+                    <ol>
+                        <li>A</li>
+                        <li>B</li>
+                    </ol>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus accusantium adipisci,
+                        architecto aspernatur culpa explicabo, fugiat laudantium minus mollitia natus obcaecati officia
+                        placeat rem soluta voluptate voluptates? Molestias, voluptatum!</p>
+                </div>
+                <div>
+                    <ul>
+                        <li>A</li>
+                        <li>B</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </section>
+    <section>
+        <div>
+            <a href="">Customer Manage</a>
+        </div>
+    </section>
+</main>
+<section>
+    <div>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid animi aperiam asperiores commodi
+                consectetur consequatur culpa fuga incidunt molestias neque nesciunt officiis perspiciatis quam
+                quibusdam, quod, repudiandae saepe tenetur.</p>
+        </div>
+    </div>
+</section>
+
+
+<script src="assests/js/jquery-3.6.0.min.js"></script>
+<script>
+
+    //Traversing Methods
+    //parent();
+    //parents();
+    //children();
+    //find();
+    //first();
+    //last();
+    //get();
+
+    //append();
+    //prepend();
+    //replaceWith();
+    //clone();
+
+
+    // parent() & parents()
+    $('a').parent(); //select the nearest parent
+    $('a').parent().parent().parent(); // can call recursively
+
+    //return all the parent hierarchy of the selected element
+    $('a').parents(); //S.fn.init[div, section, main, body, html, prevObject: S.fn.init(1)]
+
+    //can also select one from parents
+    $('a').parents('main'); //S.fn.init[main, prevObject: S.fn.init(1)]
+
+
+    // children(), first() ,last() and get()
+    //return the direct child of a selected element
+    //can recursively called
+    //when we have a collection of elements we can use get(),first(),last() methods to select one
+    $('body').children();//S.fn.init(4)[main, section, script, script, prevObject: S.fn.init(1)]
+    $('body').children('main');//S.fn.init[main, prevObject: S.fn.init(1)]
+    $('body').children('main').children();//S.fn.init(2)[section, section, prevObject: S.fn.init(1)]
+    $('body').children('main').children('section');//S.fn.init(2)[section, section, prevObject: S.fn.init(1)]
+    $('body').children('main').children().get(0) //<section></section>​<section>​<section>​<div>​…​</div>​<div>​…​</div>​<div>​…​</div>​</section>​</section>​</section>​
+    $('body').children('main').children().get(1) //<section>/section>​<div>​<a href>​Customer Manage​</a>​</div>​</section>​
+    $('body').children('main').children();//S.fn.init(2)[section, section, prevObject: S.fn.init(1)]
+    $('body').children('main').children().first();//S.fn.init[section, prevObject: S.fn.init(2)]
+    $('body').children('main').children().last();//S.fn.init[section, prevObject: S.fn.init(2)]
+
+
+    // parent(),parents() and children()
+    $('body').children('section').parent().parent();//S.fn.init[html, prevObject: S.fn.init(1)]
+    $('body').children('main').parents();//S.fn.init(2)[body, html, prevObject: S.fn.init(1)]
+
+
+    //find() - can find a child from a parent
+    $('body').find('p'); // search and return all the child p inside body
+    $('body').find('p').css('color','red');
+    $('body').find('section');
+
+
+    //append() & prepend()
+    $('body').append('<h1>Appended</h1>'); // add to the bottom of body
+    $('body').prepend('<h1>Prepended</h1>'); // add to the top of body
+    $('body').prepend('<h1>Prepended 1</h1>');
+
+    $('ol').append('<li>Append 1</li>');//add to the bottom of ol
+    $('ol').append('<li>Append 2</li>');
+    $('ol').prepend('<li>Prepend 1</li>');//add to the top of ol
+    $('ol').prepend('<li>Prepend 2</li>');
+
+
+    //replaceWith();
+    // we can replace h2 with a para
+    $('h2').replaceWith('<p>This is replaced para</p>');
+
+
+    //clone() - we can get a copy of a element
+    $('img').clone();// can copy a image or selected element's copy (clone)
+    var clonedImage=$('img').clone();
+    $('h1').replaceWith(clonedImage); // replace cloned image with h1
+
+
+
+</script>
+</body>
+</html>
